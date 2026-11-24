@@ -1,4 +1,4 @@
-**Live Website:** https://cascading-style-salon.netlify.app/
+**Live Website:** [https://cascading-style-salon.netlify.app/](https://cascading-style-salon.netlify.app/)
 **CSS - CASCADING STYLE SALON**
 > *"We fix your bad hair styles, cascaded properly."*
 
