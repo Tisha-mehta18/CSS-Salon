@@ -1,5 +1,5 @@
-# CSS — Cascading Style Salon
-🌐 **Live Website:** https://cascading-style-salon.netlify.app/
+**Live Website:** https://cascading-style-salon.netlify.app/
+**CSS - CASCADING STYLE SALON**
 > *"We fix your bad hair styles, cascaded properly."*
 
 A modern, real-time salon queue and floor management web application built for walk-in hair salons and barbershops. Playing on the beloved acronym **CSS** (*Cascading Style Sheets*), the application fuses high-end editorial salon aesthetics with witty developer culture and strict queue business rules.
