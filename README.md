@@ -1,4 +1,4 @@
-**Live Website:** [https://cascading-style-salon.netlify.app/](https://cascading-style-salon.netlify.app/)
+[🌐 Click here to open CSS Salon](https://cascading-style-salon.netlify.app/)
 **CSS - CASCADING STYLE SALON**
 > *"We fix your bad hair styles, cascaded properly."*
 
