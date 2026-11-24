@@ -229,4 +229,20 @@ Screens 1 to 4 (Home, Join Queue, My Status, Reception Dashboard)
 - npm run build, zero TS errors, all routes connected, verify all features.
 
 9. Finish completely.
+
+## Additional Troubleshooting & Completion Prompts (2026-11-24)
+
+During development, additional prompts were used to troubleshoot and complete the project:
+
+- Fix missing Join Queue navigation and screen access.
+- Correct Join Queue interaction and confirmation issues.
+- Resolve development server and port issues.
+- Complete and connect the remaining Reception, Barber, TV Display, and Owner Settings screens.
+- Verify the main queue flow and functionality across the screens.
+- Prepare the project for production build and deployment.
+- Update project documentation and prepare submission materials.
+
+Note: These are summaries of additional troubleshooting prompts; the wording is reconstructed rather than verbatim.
 ```
+
+
