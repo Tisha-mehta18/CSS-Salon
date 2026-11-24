@@ -1,0 +1,50 @@
+:root {
+  /* ========================================================================
+     CSS — Cascading Style Salon: Botanical Fashion Editorial Design System
+     Palette: Forest Green (#173D32), Warm Cream (#FFF9F0), Coral (#FF7659), Acid Lime (#D9E56A)
+     ======================================================================== */
+
+  /* Core Brand Colors */
+  --forest-green: #173D32;
+  --forest-dark: #0E2720;
+  --forest-surface: #1E4E40;
+  --forest-surface-hover: #265F4E;
+
+  --warm-cream: #FFF9F0;
+  --warm-cream-alt: #F4EDE1;
+  --cream-muted: rgba(255, 249, 240, 0.75);
+  --cream-dim: rgba(255, 249, 240, 0.45);
+  --cream-line: rgba(255, 249, 240, 0.14);
+  --cream-line-strong: rgba(255, 249, 240, 0.28);
+
+  --coral: #FF7659;
+  --coral-hover: #E85F42;
+  --coral-light: #FFEDE9;
+  --coral-glow: rgba(255, 118, 89, 0.35);
+
+  --acid-lime: #D9E56A;
+  --acid-lime-hover: #C5D254;
+  --acid-lime-glow: rgba(217, 229, 106, 0.3);
+
+  /* Typography */
+  --font-display: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-editorial-serif: 'Playfair Display', Didot, 'Bodoni MT', Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace;
+
+  /* Editorial Spacing & Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 20px rgba(14, 39, 32, 0.2);
+  --shadow-elevated: 0 16px 40px rgba(0, 0, 0, 0.35);
+  --shadow-coral: 0 10px 30px rgba(255, 118, 89, 0.35);
+
+  /* Smooth Transitions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-long: 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}

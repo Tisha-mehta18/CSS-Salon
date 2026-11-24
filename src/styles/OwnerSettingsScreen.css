@@ -1,0 +1,311 @@
+/* ==========================================================================
+   CSS — Cascading Style Salon
+   Screen 7: Owner Settings (Operational & Admin Dashboard)
+   Palette: Forest Green (#173D32), Warm Cream (#FFF9F0), Coral (#FF7659), Acid Lime (#D9E56A)
+   ========================================================================== */
+
+.settings-root {
+  min-height: 100vh;
+  background-color: var(--forest-dark);
+  color: var(--warm-cream);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nav */
+.settings-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  background-color: rgba(14, 39, 32, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--cream-line);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.settings-back-btn {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--warm-cream);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.settings-back-btn:hover {
+  color: var(--acid-lime);
+  transform: translateX(-3px);
+}
+
+.settings-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--acid-lime);
+  background: rgba(217, 229, 106, 0.1);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(217, 229, 106, 0.3);
+}
+
+/* Container */
+.settings-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 5rem;
+  width: 100%;
+}
+
+.settings-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--cream-line);
+  padding-bottom: 1.5rem;
+}
+
+.settings-header h1 {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--warm-cream);
+}
+
+.settings-header p {
+  font-size: 1rem;
+  color: var(--cream-muted);
+  margin-top: 0.5rem;
+}
+
+/* Tabs Header */
+.settings-tabs-bar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--cream-line-strong);
+  padding-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.settings-tab-btn {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-md);
+  color: var(--cream-muted);
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.settings-tab-btn:hover {
+  color: var(--warm-cream);
+}
+
+.settings-tab-btn.active {
+  background-color: var(--forest-green);
+  border-color: var(--acid-lime);
+  color: var(--acid-lime);
+}
+
+/* Tab Panels */
+.settings-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Settings Card */
+.settings-card {
+  background-color: var(--forest-green);
+  border: 1px solid var(--cream-line);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.settings-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--warm-cream);
+  margin-bottom: 0.5rem;
+}
+
+.settings-card-desc {
+  font-size: 0.9rem;
+  color: var(--cream-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Stats Row */
+.settings-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+.settings-stat-box {
+  background-color: var(--forest-dark);
+  border: 1px solid var(--cream-line-strong);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.settings-stat-number {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--acid-lime);
+}
+
+.settings-stat-number.coral {
+  color: var(--coral);
+}
+
+.settings-stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  margin-top: 0.35rem;
+}
+
+/* Form Controls */
+.settings-field-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--cream-line);
+  gap: 1.5rem;
+}
+
+.settings-field-row:last-child {
+  border-bottom: none;
+}
+
+.settings-field-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--warm-cream);
+}
+
+.settings-field-hint {
+  font-size: 0.825rem;
+  color: var(--cream-muted);
+  margin-top: 0.2rem;
+}
+
+.settings-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.settings-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.settings-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--forest-dark);
+  border: 2px solid var(--cream-line-strong);
+  border-radius: 34px;
+  transition: 0.3s;
+}
+
+.settings-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--warm-cream);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .settings-slider {
+  background-color: var(--acid-lime);
+  border-color: var(--acid-lime);
+}
+
+input:checked + .settings-slider:before {
+  transform: translateX(24px);
+  background-color: var(--forest-dark);
+}
+
+/* Table Styles for Roster and Services */
+.settings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.settings-table th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--acid-lime);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--cream-line-strong);
+}
+
+.settings-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--cream-line);
+  font-size: 0.95rem;
+}
+
+.btn-danger-outline {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--coral);
+  color: var(--coral);
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-danger-outline:hover {
+  background-color: var(--coral);
+  color: #0E2720;
+}
+
+.btn-save-settings {
+  padding: 0.85rem 2rem;
+  background-color: var(--acid-lime);
+  color: var(--forest-dark);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-smooth);
+}
+
+.btn-save-settings:hover {
+  background-color: var(--acid-lime-hover);
+  transform: translateY(-2px);
+}

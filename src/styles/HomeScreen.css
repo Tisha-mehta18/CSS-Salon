@@ -1,0 +1,894 @@
+/* ==========================================================================
+   CSS — Cascading Style Salon
+   Design System: Botanical Fashion Editorial
+   Palette: Forest Green (#173D32), Warm Cream (#FFF9F0), Coral (#FF7659), Acid Lime (#D9E56A)
+   ========================================================================== */
+
+.editorial-root {
+  min-height: 100vh;
+  background-color: var(--forest-dark);
+  color: var(--warm-cream);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   1. Slim Minimal Navbar
+   ========================================================================== */
+.editorial-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 3rem;
+  background-color: rgba(14, 39, 32, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--cream-line);
+}
+
+.nav-brand-group {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+}
+
+.nav-brand-logo {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: var(--warm-cream);
+  line-height: 1;
+}
+
+.nav-brand-sub {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+.nav-center-status {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--acid-lime);
+  background: rgba(217, 229, 106, 0.1);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(217, 229, 106, 0.3);
+}
+
+.nav-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--acid-lime);
+  box-shadow: 0 0 10px var(--acid-lime);
+  animation: pulse-lime 2s infinite ease-in-out;
+}
+
+@keyframes pulse-lime {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.nav-hours-note {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--cream-muted);
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-clock {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: var(--cream-muted);
+}
+
+.nav-lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--cream-line-strong);
+  border-radius: var(--radius-full);
+  color: var(--warm-cream);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all var(--transition-fast);
+}
+
+.nav-lang-btn:hover {
+  background-color: var(--warm-cream);
+  color: var(--forest-green);
+  border-color: var(--warm-cream);
+}
+
+/* ==========================================================================
+   2. Dramatic Split Hero Section
+   ========================================================================== */
+.split-hero-section {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  min-height: calc(100vh - 80px);
+  border-bottom: 1px solid var(--cream-line);
+}
+
+/* Left Hero: Oversized Dominant Typography & Actions */
+.hero-left-column {
+  padding: 4.5rem 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--cream-line);
+  background: radial-gradient(circle at 10% 20%, #1A4639 0%, var(--forest-dark) 70%);
+}
+
+.hero-editorial-issue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--acid-lime);
+  margin-bottom: 2rem;
+}
+
+.hero-issue-line {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background-color: var(--acid-lime);
+}
+
+/* Massive Dominant Editorial Typography */
+.hero-headline-wrap {
+  margin-bottom: 2.25rem;
+}
+
+.hero-display-line {
+  font-size: clamp(3.2rem, 6.8vw, 7.25rem);
+  font-weight: 900;
+  line-height: 0.86;
+  letter-spacing: -0.04em;
+  color: var(--warm-cream);
+  display: block;
+}
+
+.hero-serif-italic {
+  font-family: var(--font-editorial-serif);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--acid-lime);
+  display: inline-block;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  letter-spacing: -0.02em;
+}
+
+.hero-display-sub {
+  font-size: clamp(3rem, 6.4vw, 6.75rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--warm-cream);
+  display: block;
+}
+
+.hero-manifesto-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--cream-muted);
+  max-width: 580px;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+/* Primary Hero Actions (Coral Button + Inline Look Up) */
+.hero-action-block {
+  margin-bottom: 3.5rem;
+}
+
+.hero-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+/* Bold Coral Button */
+.btn-editorial-coral {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--coral);
+  color: #0E2720;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 1.15rem 2.25rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-coral);
+  min-height: 56px;
+  transition: all var(--transition-smooth);
+}
+
+.btn-editorial-coral:hover {
+  background-color: #FF8870;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(255, 118, 89, 0.45);
+}
+
+.btn-editorial-coral .arrow {
+  font-size: 1.35rem;
+  transition: transform var(--transition-fast);
+}
+
+.btn-editorial-coral:hover .arrow {
+  transform: translateX(5px);
+}
+
+.cta-sub-caption {
+  font-size: 0.8125rem;
+  color: var(--cream-dim);
+  letter-spacing: 0.05em;
+}
+
+/* Inline Check Status Look Up Input */
+.hero-inline-lookup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 480px;
+  border-bottom: 1px solid var(--cream-line-strong);
+  padding-bottom: 0.5rem;
+  transition: border-color var(--transition-fast);
+}
+
+.hero-inline-lookup:focus-within {
+  border-color: var(--acid-lime);
+}
+
+.lookup-input-minimal {
+  flex: 1;
+  background: transparent;
+  border: none;
+  font-size: 0.95rem;
+  color: var(--warm-cream);
+  padding: 0.5rem 0;
+}
+
+.lookup-input-minimal::placeholder {
+  color: var(--cream-dim);
+}
+
+.btn-lookup-minimal {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--acid-lime);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.btn-lookup-minimal:hover {
+  background-color: rgba(217, 229, 106, 0.15);
+}
+
+/* Asymmetrical Ticker Metrics at Base of Left Column */
+.hero-editorial-stats {
+  display: flex;
+  align-items: baseline;
+  gap: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--cream-line);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--warm-cream);
+  line-height: 1;
+}
+
+.stat-number.lime {
+  color: var(--acid-lime);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cream-dim);
+}
+
+/* Right Hero: Dominant Full-Bleed Botanical Photography */
+.hero-right-column {
+  position: relative;
+  background-color: var(--forest-green);
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+
+.hero-photo-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+}
+
+.hero-main-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: contrast(1.05) brightness(0.92);
+  transition: transform 6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-photo-wrapper:hover .hero-main-photo {
+  transform: scale(1.03);
+}
+
+/* Dark Green Film Overlay */
+.hero-photo-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(14, 39, 32, 0.2) 0%,
+    rgba(14, 39, 32, 0.6) 80%,
+    rgba(14, 39, 32, 0.95) 100%
+  );
+  pointer-events: none;
+}
+
+/* Floating High-Fashion Editorial Badges */
+.badge-floating-lime {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  background-color: var(--acid-lime);
+  color: var(--forest-dark);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-elevated);
+}
+
+.badge-floating-coral {
+  position: absolute;
+  bottom: 3.5rem;
+  left: 2.5rem;
+  background: rgba(14, 39, 32, 0.9);
+  border: 1px solid var(--coral);
+  color: var(--coral);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-elevated);
+  max-width: 280px;
+  backdrop-filter: blur(8px);
+}
+
+.floating-caption-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--warm-cream);
+  margin-bottom: 0.25rem;
+}
+
+.floating-caption-desc {
+  font-size: 0.85rem;
+  color: var(--cream-muted);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   3. Editorial Hours & 30-Minute Closing Cutoff Spread
+   ========================================================================== */
+.editorial-hours-spread {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  border-bottom: 1px solid var(--cream-line);
+}
+
+.hours-media-side {
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid var(--cream-line);
+  min-height: 480px;
+}
+
+.hours-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.05) brightness(0.85);
+}
+
+.hours-media-caption {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  background: rgba(14, 39, 32, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--cream-line);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--warm-cream);
+  letter-spacing: 0.08em;
+}
+
+.hours-content-side {
+  padding: 5rem 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--forest-green);
+}
+
+.hours-section-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--acid-lime);
+  margin-bottom: 1rem;
+}
+
+.hours-section-title {
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--warm-cream);
+  margin-bottom: 2.5rem;
+}
+
+.hours-table-editorial {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  border-top: 1px solid var(--cream-line);
+  padding-top: 2rem;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--cream-line);
+}
+
+.hours-day-label {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--warm-cream);
+}
+
+.hours-time-val {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--acid-lime);
+}
+
+/* Bold Architectural Alert for the 30-Minute Closing Rule */
+.cutoff-alert-block {
+  background-color: rgba(14, 39, 32, 0.9);
+  border-left: 4px solid var(--coral);
+  padding: 1.75rem 2rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  position: relative;
+}
+
+.cutoff-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--coral);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.cutoff-text-bold {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--warm-cream);
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.cutoff-text-sub {
+  font-size: 0.9375rem;
+  color: var(--cream-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   4. Atelier Floor Portals (Minimal Editorial Index)
+   ========================================================================== */
+.editorial-portals-section {
+  padding: 5rem 4rem;
+  background-color: var(--forest-dark);
+  border-bottom: 1px solid var(--cream-line);
+}
+
+.portals-header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid var(--cream-line);
+  padding-bottom: 1.5rem;
+}
+
+.portals-title-big {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--warm-cream);
+}
+
+.portals-subtitle {
+  font-size: 0.85rem;
+  color: var(--cream-dim);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.portals-index-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.portal-index-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.25rem 1.75rem;
+  background-color: var(--forest-surface);
+  border: 1px solid var(--cream-line);
+  border-radius: var(--radius-md);
+  text-align: left;
+  transition: all var(--transition-smooth);
+  position: relative;
+}
+
+.portal-index-card:hover {
+  background-color: var(--forest-surface-hover);
+  border-color: var(--acid-lime);
+  transform: translateY(-4px);
+}
+
+.portal-num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--acid-lime);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.1em;
+}
+
+.portal-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--warm-cream);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.portal-desc {
+  font-size: 0.85rem;
+  color: var(--cream-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.portal-route-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--cream-dim);
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   5. Minimal Editorial Footer
+   ========================================================================== */
+.editorial-footer {
+  padding: 3.5rem 4rem;
+  background-color: #0A1C17;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-dev-humor {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--acid-lime);
+}
+
+.footer-copy {
+  font-size: 0.8125rem;
+  color: var(--cream-dim);
+}
+
+/* ==========================================================================
+   6. Editorial Check Status Modal Dialog
+   ========================================================================== */
+.editorial-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba(14, 39, 32, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: modal-fade-in 180ms ease;
+}
+
+.editorial-modal-box {
+  background-color: var(--forest-green);
+  border: 1px solid var(--cream-line-strong);
+  border-radius: var(--radius-lg);
+  max-width: 520px;
+  width: 100%;
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-elevated);
+  position: relative;
+}
+
+.modal-issue-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--acid-lime);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.editorial-modal-title {
+  font-size: 1.75rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--warm-cream);
+  margin-bottom: 0.5rem;
+}
+
+.editorial-modal-sub {
+  font-size: 0.9rem;
+  color: var(--cream-muted);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.editorial-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.editorial-modal-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--warm-cream);
+}
+
+.editorial-modal-input {
+  background-color: var(--forest-dark);
+  border: 1px solid var(--cream-line-strong);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  font-size: 1.05rem;
+  color: var(--warm-cream);
+  transition: border-color var(--transition-fast);
+}
+
+.editorial-modal-input:focus {
+  border-color: var(--acid-lime);
+}
+
+.editorial-modal-hint {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--acid-lime);
+  background-color: rgba(217, 229, 106, 0.08);
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius-xs);
+  border-left: 2px solid var(--acid-lime);
+}
+
+.editorial-modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-modal-dismiss {
+  padding: 0.9rem 1.5rem;
+  border: 1px solid var(--cream-line);
+  color: var(--warm-cream);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-modal-dismiss:hover {
+  border-color: var(--warm-cream);
+}
+
+/* Toast Notifications */
+.editorial-toast {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 150;
+  background-color: var(--coral);
+  color: #0E2720;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 1rem 1.75rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-coral);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: toast-in 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes toast-in {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ==========================================================================
+   Responsive Adaptations (Mobile & Tablet)
+   ========================================================================== */
+@media (max-width: 1100px) {
+  .split-hero-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left-column {
+    padding: 3.5rem 2.5rem;
+    border-right: none;
+    border-bottom: 1px solid var(--cream-line);
+  }
+
+  .hero-right-column {
+    min-height: 480px;
+  }
+
+  .editorial-hours-spread {
+    grid-template-columns: 1fr;
+  }
+
+  .hours-media-side {
+    min-height: 360px;
+    border-right: none;
+    border-bottom: 1px solid var(--cream-line);
+  }
+
+  .portals-index-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .editorial-nav {
+    padding: 1rem 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+  }
+
+  .nav-center-status {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero-left-column {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero-editorial-stats {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .hours-content-side {
+    padding: 3rem 1.5rem;
+  }
+
+  .editorial-portals-section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .portals-index-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .editorial-footer {
+    padding: 2.5rem 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .editorial-toast {
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+}

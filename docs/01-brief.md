@@ -88,26 +88,20 @@ To keep the application focused, resilient, and true to walk-in salon reality, t
 
 ## 5. Design Direction
 
-### 5.1 Theme & Barber Aesthetic
-The visual identity fuses a premium, modern barbershop lounge with subtle, tasteful developer styling humor:
-- **Atmosphere:** Dark, industrial-warm, sleek grooming studio.
-- **Playful Touches:** Subtle CSS puns in headings and status badges (e.g., `display: flex; /* We fit you in */`, `overflow: hidden; /* No long lines */`, `border-radius: 50%; /* Fade clean */`).
+### 5.1 Theme & Botanical Editorial Aesthetic
+The visual identity embodies a bold, high-fashion editorial magazine aesthetic combined with a premium botanical salon identity:
+- **Atmosphere:** Deep botanical sanctuary, dramatic natural lighting, oversized typographic scales, and high-fashion hair styling photography.
+- **Playful Touches:** Subtle CSS developer puns woven into fashion editorial captions (e.g., `display: grid; /* Natural botanical form, cascaded properly */`, `overflow: hidden; /* Zero wait anxiety */`, `border-radius: 50%; /* Fade clean */`).
 
 ### 5.2 Color Palette
-- **Background Deep Neutral:** Charcoal Slate (`#0B0F19` and `#111827`) for depth and high contrast.
-- **Surface & Cards:** Dark Gunmetal (`#1F2937` and `#374151`) with refined 1px border lines (`#4B5563`).
-- **Primary Accent:** Barber Warm Amber / Gold (`#F59E0B` and `#D97706`) for interactive elements, highlights, and primary actions.
-- **Status Signal Colors:**
-  - `Waiting`: Warm Amber (`#F59E0B`)
-  - `Called`: Electric Cyan / Sky Blue (`#0EA5E9`) with pulsing neon glow
-  - `In Chair`: Vibrant Emerald Green (`#10B981`)
-  - `Completed`: Muted Slate (`#6B7280`)
-  - `Cancelled / No-Show`: Coral Rose (`#EF4444`)
-- **Text & Foreground:** High-legibility Crisp White (`#F9FAFB`) and Muted Silver (`#9CA3AF`).
+- **Primary Deep Forest Green:** `#173D32` (and deep ground `#0E2720`) for rich botanical atmosphere and depth.
+- **Warm Editorial Cream:** `#FFF9F0` for high-contrast luxury editorial typography and airy readability.
+- **Vibrant Coral Accent:** `#FF7659` for high-energy primary calls to action, badges, and focal points.
+- **Acid Lime Highlighting:** `#D9E56A` for live floor indicators, queue counts, and typographic accents.
 
 ### 5.3 Typography & Readability
-- **UI & Headings:** Modern geometric sans-serif (`Inter`, `Plus Jakarta Sans`, or `system-ui`) paired with `Noto Sans Gujarati` for crisp Gujarati typography across all device viewports.
-- **Tokens & Countdowns:** High-impact monospace (`JetBrains Mono`, `Roboto Mono`, or tabular numbers) to prevent layout shifting during wait-time countdowns and guarantee instant readability.
+- **Dominant Editorial Headings:** Oversized geometric sans-serif (`Plus Jakarta Sans`, `Inter`, `system-ui`) paired with elegant high-fashion italic serif accents (`Playfair Display`, `Didot`, `Georgia`) and `Noto Sans Gujarati`.
+- **Tokens & Countdowns:** High-impact monospace (`JetBrains Mono`, `Roboto Mono`, or tabular numbers) for crystal-clear ticket and wait-time visibility.
 
 ### 5.4 Ergonomics & Form Factors
 - **Kiosk & Mobile:** Touch targets minimum $48\times 48\text{px}$, large digit phone keypad input, clear progress steps.

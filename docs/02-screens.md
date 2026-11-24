@@ -83,11 +83,12 @@ The self-service check-in kiosk and customer mobile registration interface. Allo
   - **Section A: Customer Details:**
     - Full Name input (autofocused) / ગ્રાહકનું નામ.
     - Mobile Phone Number input (with country code and auto-formatter) / ફોન નંબર.
-  - **Section B: Service Selection / સેવા પસંદ કરો:**
-    - Visual selectable service cards with title, duration, and price:
+  - **Section B: Service Selection / સેવા પસંદ કરો (Maximum 3 Services):**
+    - Visual selectable service cards with title, duration, and price (supports choosing 1 to 3 services; selecting a 4th service is disallowed with an inline notification):
       - *Classic Haircut / હેરકટ - 30 min*
       - *Beard Trim & Shape / દાઢી ટ્રીમ - 15 min*
       - *The Full Stack: Haircut + Beard / હેરકટ + દાઢી - 45 min*
+      - *Botanical Scalp Ritual / બોટાનિકલ સ્કાલ્પ ટ્રીટમેન્ટ - 25 min*
       - *Quick Lineup / ક્વિક લાઇનઅપ - 15 min*
   - **Section C: Stylist Preference / વાળંદ પસંદગી:**
     - Toggle chips: `Any Available Barber (Fastest) / કોઈપણ ઉપલબ્ધ વાળંદ` vs. `Specific Barber / ચોક્કસ વાળંદ`.

@@ -1,0 +1,668 @@
+/* ==========================================================================
+   CSS — Cascading Style Salon
+   Screen 2: Join Queue (Editorial Botanical Walk-In Form)
+   Palette: Forest Green (#173D32), Warm Cream (#FFF9F0), Coral (#FF7659), Acid Lime (#D9E56A)
+   ========================================================================== */
+
+.join-queue-root {
+  min-height: 100vh;
+  background-color: var(--forest-dark);
+  color: var(--warm-cream);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Minimal Top Utility Header with Back Button */
+.join-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background-color: rgba(14, 39, 32, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--cream-line);
+}
+
+.btn-nav-back {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--warm-cream);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-nav-back:hover {
+  color: var(--acid-lime);
+  transform: translateX(-3px);
+}
+
+.join-brand-badge {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--warm-cream);
+}
+
+/* Main Form Page Container */
+.join-main-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+  width: 100%;
+}
+
+/* Editorial Title Banner */
+.join-header-banner {
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid var(--cream-line);
+  padding-bottom: 2rem;
+}
+
+.join-issue-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--acid-lime);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.join-page-title {
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--warm-cream);
+  margin-bottom: 0.75rem;
+}
+
+.join-page-subtitle {
+  font-size: 1.1rem;
+  color: var(--cream-muted);
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* Two-Column Layout: Form Flow on Left, Live Summary on Right */
+.join-grid-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* Form Steps Wrapper */
+.join-form-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* Section Header styling */
+.form-step-header {
+  margin-bottom: 1.5rem;
+}
+
+.form-step-number {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--acid-lime);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.form-step-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--warm-cream);
+}
+
+.form-step-desc {
+  font-size: 0.9rem;
+  color: var(--cream-muted);
+  margin-top: 0.25rem;
+}
+
+/* 1. Guest Details Inputs */
+.details-inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  background-color: var(--forest-green);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--cream-line);
+}
+
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-input-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--warm-cream);
+}
+
+.form-text-input {
+  background-color: var(--forest-dark);
+  border: 1px solid var(--cream-line-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.95rem 1.15rem;
+  font-size: 1rem;
+  color: var(--warm-cream);
+  transition: all var(--transition-fast);
+}
+
+.form-text-input:focus {
+  border-color: var(--acid-lime);
+  box-shadow: 0 0 0 2px rgba(217, 229, 106, 0.2);
+}
+
+.field-error-msg {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--coral);
+  margin-top: 0.25rem;
+}
+
+/* 2. Services Selection */
+.services-selection-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.services-limit-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(255, 249, 240, 0.05);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--cream-line);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+}
+
+.limit-counter-pill {
+  color: var(--acid-lime);
+  font-weight: 700;
+}
+
+/* Service Card */
+.service-select-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.75rem;
+  background-color: var(--forest-green);
+  border: 1px solid var(--cream-line);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+  user-select: none;
+}
+
+.service-select-card:hover {
+  background-color: var(--forest-surface);
+  border-color: var(--cream-line-strong);
+}
+
+.service-select-card.selected {
+  border-color: var(--acid-lime);
+  background: linear-gradient(135deg, rgba(217, 229, 106, 0.08) 0%, var(--forest-green) 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.service-checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  border: 2px solid var(--cream-line-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.service-select-card.selected .service-checkbox {
+  background-color: var(--acid-lime);
+  border-color: var(--acid-lime);
+  color: var(--forest-dark);
+}
+
+.service-info-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--warm-cream);
+  margin-bottom: 0.25rem;
+}
+
+.service-info-desc {
+  font-size: 0.85rem;
+  color: var(--cream-muted);
+  line-height: 1.45;
+  max-width: 480px;
+}
+
+.service-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+  margin-left: 1rem;
+}
+
+.service-price-tag {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--warm-cream);
+}
+
+.service-duration-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--acid-lime);
+}
+
+/* 3. Stylist Preference Selection */
+.barber-selection-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.any-barber-hero-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.75rem;
+  background-color: var(--forest-green);
+  border: 1px solid var(--cream-line);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.any-barber-hero-card:hover {
+  background-color: var(--forest-surface);
+}
+
+.any-barber-hero-card.selected {
+  border-color: var(--acid-lime);
+  background: linear-gradient(135deg, rgba(217, 229, 106, 0.08) 0%, var(--forest-green) 100%);
+}
+
+.any-barber-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--warm-cream);
+}
+
+.any-barber-sub {
+  font-size: 0.85rem;
+  color: var(--cream-muted);
+}
+
+.barber-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.barber-select-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  background-color: var(--forest-green);
+  border: 1px solid var(--cream-line);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.barber-select-card:hover {
+  background-color: var(--forest-surface);
+}
+
+.barber-select-card.selected {
+  border-color: var(--acid-lime);
+  background-color: var(--forest-surface);
+  transform: translateY(-2px);
+}
+
+.barber-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.85rem;
+  border: 2px solid var(--cream-line);
+}
+
+.barber-select-card.selected .barber-avatar {
+  border-color: var(--acid-lime);
+}
+
+.barber-card-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--warm-cream);
+  margin-bottom: 0.2rem;
+}
+
+.barber-card-station {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--acid-lime);
+  margin-bottom: 0.35rem;
+}
+
+.barber-card-specialty {
+  font-size: 0.78rem;
+  color: var(--cream-muted);
+  line-height: 1.35;
+  margin-bottom: 0.85rem;
+}
+
+.barber-wait-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--cream-dim);
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   Live Sticky Appointment Summary (Right Column)
+   ========================================================================== */
+.join-summary-column {
+  position: sticky;
+  top: 6rem;
+}
+
+.summary-editorial-box {
+  background-color: var(--forest-green);
+  border: 1px solid var(--cream-line-strong);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  box-shadow: var(--shadow-elevated);
+}
+
+.summary-header-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--acid-lime);
+}
+
+.summary-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--warm-cream);
+  margin-top: 0.25rem;
+}
+
+.summary-selected-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--cream-line);
+  border-bottom: 1px solid var(--cream-line);
+}
+
+.summary-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.summary-item-name {
+  color: var(--warm-cream);
+  font-weight: 600;
+}
+
+.summary-item-price {
+  font-family: var(--font-mono);
+  color: var(--acid-lime);
+  font-weight: 700;
+}
+
+.summary-totals-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.summary-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.summary-stat-label {
+  font-size: 0.9rem;
+  color: var(--cream-muted);
+}
+
+.summary-stat-val {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--warm-cream);
+}
+
+.summary-stat-val.total-price {
+  color: var(--coral);
+}
+
+.summary-terms-notice {
+  font-size: 0.8125rem;
+  color: var(--cream-dim);
+  line-height: 1.5;
+  border-left: 2px solid var(--acid-lime);
+  padding-left: 0.75rem;
+}
+
+/* Submit Coral Button */
+.btn-submit-queue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: var(--coral);
+  color: #0E2720;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 1.15rem 2rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-coral);
+  width: 100%;
+  min-height: 56px;
+  transition: all var(--transition-smooth);
+}
+
+.btn-submit-queue:hover {
+  background-color: #FF8870;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 118, 89, 0.45);
+}
+
+/* ==========================================================================
+   Success State / Issued Token Screen
+   ========================================================================== */
+.success-card-editorial {
+  max-width: 640px;
+  margin: 3rem auto;
+  background-color: var(--forest-green);
+  border: 1px solid var(--acid-lime);
+  border-radius: var(--radius-xl);
+  padding: 3.5rem 3rem;
+  text-align: center;
+  box-shadow: var(--shadow-elevated);
+  animation: success-appear 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes success-appear {
+  from { opacity: 0; transform: scale(0.96) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.success-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--forest-dark);
+  background-color: var(--acid-lime);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.5rem;
+}
+
+.success-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--warm-cream);
+  margin-bottom: 1rem;
+}
+
+.token-hero-box {
+  background-color: var(--forest-dark);
+  border: 2px dashed var(--acid-lime);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.token-label-small {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--cream-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.token-number-giant {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: var(--acid-lime);
+  line-height: 1;
+}
+
+.success-meta-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--cream-line);
+  border-bottom: 1px solid var(--cream-line);
+}
+
+.success-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.success-meta-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--cream-dim);
+  text-transform: uppercase;
+}
+
+.success-meta-val {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--warm-cream);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .join-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .join-summary-column {
+    position: static;
+  }
+
+  .barber-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .join-nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .join-main-container {
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  .details-inputs-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .barber-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .success-card-editorial {
+    padding: 2.5rem 1.5rem;
+  }
+}
