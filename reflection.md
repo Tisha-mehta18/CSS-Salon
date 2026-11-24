@@ -1,0 +1,7 @@
+Reflection — CSS Salon Vibe Coding Lab
+
+During the development of CSS Salon, I learned that vibe coding can speed up development significantly, but AI-generated code still requires careful testing. One issue I encountered was that some parts of the user interface and queue flow were not working as expected initially. For example, I faced issues with the Join Queue screen, where navigation and confirmation were not immediately working as intended.
+
+I noticed these problems by manually running the application and testing it as a real user rather than relying only on the AI agent's statements that the implementation was complete. I then gave clearer instructions to complete the remaining screens, integrate them properly, and ensure that the main queue flow and interactions worked. I also tested the screens individually and verified the production build.
+
+This experience taught me that AI is a powerful development assistant, but the developer must still understand the requirements, identify errors, test the output, and guide the agent with specific instructions. I learned that giving clear prompts and testing the application end-to-end are essential for building a reliable project using vibe coding.
